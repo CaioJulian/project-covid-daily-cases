@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div id="world-map" style="width: 600px; height: 400px"></div>
+  <div class="flex justify-center">
+    <div id="world-map" class="max-w-screen-md w-full"></div>
   </div>
 </template>
 
@@ -19,3 +19,8 @@ export default {
   },
 }
 </script>
+<style lang="postcss" scoped>
+#world-map {
+  height: 400px;
+}
+</style>
