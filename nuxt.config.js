@@ -8,7 +8,29 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        media: 'screen',
+        href: 'css/jquery-jvectormap-2.0.5.css',
+      },
+    ],
+    script: [
+      {
+        src: 'js/jquery-3.6.0.min.js',
+        type: 'text/javascript',
+      },
+      {
+        src: 'js/jquery-jvectormap-2.0.5.min.js',
+        type: 'text/javascript',
+      },
+      {
+        src: 'js/jquery-jvectormap-world-mill-en.js',
+        type: 'text/javascript',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

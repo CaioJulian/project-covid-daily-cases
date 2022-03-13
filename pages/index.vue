@@ -1,5 +1,5 @@
 <template>
-  <Tutorial />
+  <MapCase />
 </template>
 
 <script>
