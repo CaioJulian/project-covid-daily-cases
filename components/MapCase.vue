@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center">
+  <div class="flex justify-center pt-2">
     <div id="world-map" class="max-w-screen-md w-full"></div>
   </div>
 </template>

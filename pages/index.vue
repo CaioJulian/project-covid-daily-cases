@@ -4,6 +4,7 @@
       <h1 class="text-3xl font-semibold">Covid Daily Cases</h1>
     </header>
     <section class="pt-2">
+      <RangeDate />
       <MapCase />
     </section>
   </main>
