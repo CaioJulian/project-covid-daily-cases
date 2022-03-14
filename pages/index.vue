@@ -13,5 +13,13 @@
 <script>
 export default {
   name: 'IndexPage',
+  created() {
+    this.fetchCases()
+  },
+  methods: {
+    async fetchCases() {
+      await this.$store.dispatch('caseManager/fetchCases')
+    },
+  },
 }
 </script>
