@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    entrypoint: >
+      sh -c "cp .env.example .env &&
+      yarn install && yarn dev"
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+    depends_on:
+      - json-server
+
+  json-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    entrypoint: sh -c "yarn install && yarn server"
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app

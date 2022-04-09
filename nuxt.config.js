@@ -8,7 +8,29 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        media: 'screen',
+        href: 'css/jquery-jvectormap-2.0.5.css',
+      },
+    ],
+    script: [
+      {
+        src: 'js/jquery-3.6.0.min.js',
+        type: 'text/javascript',
+      },
+      {
+        src: 'js/jquery-jvectormap-2.0.5.min.js',
+        type: 'text/javascript',
+      },
+      {
+        src: 'js/jquery-jvectormap-world-mill-en.js',
+        type: 'text/javascript',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -39,7 +61,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: process.env.API_URL,
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
